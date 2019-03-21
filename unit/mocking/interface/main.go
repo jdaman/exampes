@@ -7,15 +7,21 @@ import (
 var caller Caller
 
 type Caller struct {
-	MylibCaller mylib.CallerInterface
+	MylibCaller mylib.LibCallerInterface
 }
 
-func main(){}
+func main(){
+	caller.GreaterThan5()
+}
 
 func init() {
 	caller.MylibCaller = mylib.New()
 }
 
-func (Caller) GreaterThan5() bool {
-	return caller.MylibCaller.GetN() > 5
+func New(callerInterface mylib.LibCallerInterface) Caller {
+	return Caller{callerInterface}
+}
+
+func (c *Caller) GreaterThan5() bool {
+	return c.MylibCaller.GetN() > 5
 }

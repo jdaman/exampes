@@ -1,15 +1,15 @@
 package mylib
 
-type CallerInterface interface {
+type LibCallerInterface interface {
 	GetN() int
 }
 
-type Caller struct {}
+type LibCaller struct {}
 
-func New() Caller {
-	return Caller{}
+func New() LibCaller {
+	return LibCaller{}
 }
 
-func (Caller) GetN() int {
+func (LibCaller) GetN() int {
 	return 8
 }
