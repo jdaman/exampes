@@ -1,5 +1,7 @@
 package mylib
 
+import "math/rand"
+
 type LibCallerInterface interface {
 	GetN() int
 }
@@ -10,6 +12,7 @@ func New() LibCaller {
 	return LibCaller{}
 }
 
+// Each function to be mocked must be called via an interface.
 func (LibCaller) GetN() int {
-	return 8
+	return rand.Int()
 }
