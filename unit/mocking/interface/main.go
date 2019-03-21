@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/jdaman/exampes/unit/mocking/interface/mylib"
+	"github.com/jdaman/examples/unit/mocking/interface/mylib"
 )
 
 var caller Caller
