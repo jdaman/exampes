@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/jdaman/awesomeProject/Mylib"
 	"github.com/jdaman/examples/unit/mocking/interface/mylib"
 )
 
@@ -28,6 +27,6 @@ func (c *Caller) GreaterThan5() bool {
 	return c.MylibCaller.GetN() > 5
 }
 
-func LessThan5(c Mylib.CallerInterface) bool {
+func LessThan5(c mylib.LibCallerInterface) bool {
 	return c.GetN() < 5
 }
